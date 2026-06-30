@@ -1,0 +1,244 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7efe7;
+    color:#4b2e20;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#6b4226;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#f5d7b5;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(rgba(60,35,20,.55),rgba(60,35,20,.55)),
+    url("images/me.jpg.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-text{
+    max-width:800px;
+    color:white;
+}
+
+.hero-text h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#ffe8d1;
+}
+
+.hero-text p{
+    font-size:22px;
+    line-height:2;
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#6b4226;
+}
+
+/* ===========================
+   VISION BOARD
+=========================== */
+
+.vision{
+    padding:90px 8%;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
+
+.card h3{
+    text-align:center;
+    padding:20px;
+    color:#6b4226;
+}
+
+/* Phone card alone */
+
+.phone-card{
+    grid-column:1 / span 2;
+    width:50%;
+    margin:auto;
+}
+
+/* ===========================
+   PROMISE
+=========================== */
+
+.promise{
+    background:#efe0d1;
+    padding:90px 10%;
+}
+
+.promise p{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:21px;
+}
+
+/* ===========================
+   BIBLE VERSE
+=========================== */
+
+.verse{
+    padding:90px 10%;
+    text-align:center;
+}
+
+.verse p{
+    font-size:28px;
+    font-style:italic;
+    line-height:1.8;
+}
+
+.verse h3{
+    margin-top:30px;
+    font-size:30px;
+    color:#6b4226;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#6b4226;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-text h2{
+font-size:26px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.phone-card{
+grid-column:auto;
+width:100%;
+}
+
+section h2{
+font-size:32px;
+}
+
+}
